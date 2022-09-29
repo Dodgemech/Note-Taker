@@ -1,6 +1,6 @@
 const express = require('express');
-const apiRoutes = require('./routes/ApiRoutes');
-const htmlRoutes = require('./routes/HtmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 // Activates express and dedicates the port to use
 const app = express();
@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use('/api', ApiRoutes);
-app.use('/', HtmlRoutes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // Error catch for invalid responses
 app.use((req, res) => {

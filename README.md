@@ -1,5 +1,5 @@
 # Note Taker
-A node driven application deployed on Heroku that can be used to create notes, tittle them and save them persistently.
+A node driven application deployed on Heroku that can be used to create, edit, save and delete notes.
 
 ## Built With
 - HTML
